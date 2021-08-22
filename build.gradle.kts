@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.klogging"
-version = "0.1.0"
+version = "0.1.1"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
 
 repositories {
