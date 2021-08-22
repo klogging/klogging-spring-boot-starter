@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Publish POM
-        run: ./gradlew publish
+        run: ./gradlew publish closeAndReleaseSonatypeStagingRepository
         env:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
