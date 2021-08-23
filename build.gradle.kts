@@ -6,16 +6,11 @@ plugins {
 }
 
 group = "io.klogging"
-version = "0.1.2"
+version = "0.1.3-SNAPSHOT"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    api("io.klogging:klogging-jvm:0.3.0")
-    api("io.klogging:slf4j-klogging:0.1.0")
 }
 
 publishing {
@@ -30,18 +25,37 @@ publishing {
                         name.set("The Apache License, Version 2.0")
                         url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
                     }
-                    developers {
-                        developer {
-                            id.set("mjstrasser")
-                            name.set("Michael Strasser")
-                            email.set("mjstrasser@klogging.io")
-                        }
-                    }
-                    scm {
-                        connection.set("scm:git:git://github.com/klogging/klogging-spring-boot-starter.git")
-                        url.set("https://github.com/klogging/klogging-spring-boot-starter")
+                }
+                developers {
+                    developer {
+                        id.set("mjstrasser")
+                        name.set("Michael Strasser")
+                        email.set("mjstrasser@klogging.io")
                     }
                 }
+                scm {
+                    connection.set("scm:git:git://github.com/klogging/klogging-spring-boot-starter.git")
+                    url.set("https://github.com/klogging/klogging-spring-boot-starter")
+                }
+            }
+            pom.withXml {
+                asNode().apply {
+                    appendNode("dependencies").apply {
+                        appendNode("dependency").apply{
+                            appendNode("groupId", "io.klogging")
+                            appendNode("artifactId", "klogging-jvm")
+                            appendNode("version", "0.3.0")
+                            appendNode("scope", "compile")
+                        }
+                        appendNode("dependency").apply{
+                            appendNode("groupId", "io.klogging")
+                            appendNode("artifactId", "slf4j-klogging")
+                            appendNode("version", "0.1.0")
+                            appendNode("scope", "compile")
+                        }
+                    }
+                }
+                
             }
         }
     }
