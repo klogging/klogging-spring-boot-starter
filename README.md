@@ -1,6 +1,6 @@
 # Spring Boot starter for Klogging
 
-Gradle usage:
+## Set up Gradle:
 
 ```kotlin
 dependencies {
@@ -14,5 +14,34 @@ dependencies {
         exclude(group = "ch.qos.logback")
     }
     // Other test dependencies.
+}
+```
+
+## Configure Klogging
+
+Put a `logging.json` file in the `src/main/resources` directory of the project.
+
+Here is a simple one for logging to the console.
+
+```json
+{
+  "sinks": {
+    "stdout": {
+      "renderWith": "RENDER_SIMPLE",
+      "dispatchTo": "STDOUT"
+    }
+  },
+  "logging": [
+    {
+      "levelRanges": [
+        {
+          "fromMinLevel": "INFO",
+          "toSinks": [
+            "stdout"
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
