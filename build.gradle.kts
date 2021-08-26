@@ -2,12 +2,15 @@ plugins {
     `maven-publish`
     `java-library`
     signing
-    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
+    id("io.github.gradle-nexus.publish-plugin")
 }
 
 group = "io.klogging"
 version = "0.1.4-SNAPSHOT"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
+
+val kloggingVersion: String by project
+val slf4jKloggingVersion: String by project
 
 repositories {
     mavenCentral()
@@ -44,13 +47,13 @@ publishing {
                         appendNode("dependency").apply{
                             appendNode("groupId", "io.klogging")
                             appendNode("artifactId", "klogging-jvm")
-                            appendNode("version", "0.3.0")
+                            appendNode("version", kloggingVersion)
                             appendNode("scope", "compile")
                         }
                         appendNode("dependency").apply{
                             appendNode("groupId", "io.klogging")
                             appendNode("artifactId", "slf4j-klogging")
-                            appendNode("version", "0.1.0")
+                            appendNode("version", slf4jKloggingVersion)
                             appendNode("scope", "compile")
                         }
                     }
