@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.klogging"
-version = "0.1.4-SNAPSHOT"
+version = "0.1.4"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
 
 val kloggingVersion: String by project
@@ -14,6 +14,9 @@ val slf4jKloggingVersion: String by project
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://s01.oss.sonatype.org/content/repositories/releases/")
+    }
 }
 
 publishing {
