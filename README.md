@@ -9,7 +9,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter") {
         exclude(group = "ch.qos.logback")
     }
-    implementation("io.klogging:klogging-spring-boot-starter:0.2.0")
+    implementation("io.klogging:klogging-spring-boot-starter:0.2.3")
     // Other runtime dependencies.
     
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
@@ -29,7 +29,7 @@ Here is a simple one for logging to the console.
 {
   "sinks": {
     "stdout": {
-      "renderWith": "RENDER_SIMPLE",
+      "renderWith": "RENDER_ANSI",
       "dispatchTo": "STDOUT"
     }
   },

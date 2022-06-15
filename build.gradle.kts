@@ -24,7 +24,7 @@ plugins {
 }
 
 group = "io.klogging"
-version = "0.2.2"
+version = "0.2.3"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
 
 val kloggingVersion: String by project
