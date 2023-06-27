@@ -30,7 +30,7 @@ Here is a simple one for logging to the console.
   "sinks": {
     "stdout": {
       "renderWith": "RENDER_ANSI",
-      "dispatchTo": "STDOUT"
+      "sendTo": "STDOUT"
     }
   },
   "logging": [
