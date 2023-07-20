@@ -1,6 +1,6 @@
 /*
 
-   Copyright 2021-2022 Michael Strasser.
+   Copyright 2021-2023 Michael Strasser.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ plugins {
 }
 
 group = "io.klogging"
-version = "0.3.4"
+version = "0.3.5"
 description = "Starter for using Klogging for logging. An alternative to spring-boot-starter-logging"
 
 val kloggingVersion: String by project
