@@ -1,8 +1,6 @@
 # Spring Boot starter for Klogging
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build](https://github.com/klogging/klogging-spring-boot-starter/actions/workflows/build.yml/badge.svg)](https://github.com/klogging/klogging/actions/workflows/build.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/io.klogging/klogging-spring-boot-starter.svg?label=maven%20central)](https://search.maven.org/search?q=g:%22io.klogging%22%20AND%20a:%klogging-spring-boot-starter%22)
+## The code for this library is now [here](https://github.com/klogging/klogging/tree/main/klogging-spring-boot-starter) and this repository is archived
 
 See [Klogging documentation](https://klogging.io/docs/java/spring-boot) for more details.
 
@@ -13,7 +11,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter") {
         exclude(group = "ch.qos.logback")
     }
-    implementation("io.klogging:klogging-spring-boot-starter:0.3.6")
+    implementation("io.klogging:klogging-spring-boot-starter:0.5.0")
     // Other runtime dependencies.
     
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
